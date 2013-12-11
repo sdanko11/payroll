@@ -1,1 +1,18 @@
 <p>List your employees here</p>
+
+<% @employees.each do |person| %>
+<ul>
+  <%= person.first_name %> <%= person.last_name %>
+  <%= "Gross salary:"%> <%= person.net_pay_before_tax.round(2) %>
+  <%= "Net pay:" %> <%= person.net_pay_after_tax.round(2) %>
+
+
+
+<% if false %>
+  <%= person.first_name %> <%= person.last_name %> 
+  <%='Position:'%> <%= person.position %>
+  <%=person.base_pay%>
+  <%=person.net_pay_before_tax.round(2)%>
+  <% end %>
+</ul>
+<%end%>
