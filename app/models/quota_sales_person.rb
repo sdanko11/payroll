@@ -11,7 +11,6 @@ class QuotaSalesPerson < Employee
     @sales.each do |sale|
       if sale["last_name"] == @last_name
         @bonus_counter += sale['gross_sale_value'].to_f
-        # @@all_employees << @bonus_counter
       end
     end
 

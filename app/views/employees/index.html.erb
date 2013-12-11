@@ -1,7 +1,7 @@
 <p>List your employees here</p>
 
 <% @employees.each do |person| %>
-<ul>
+<ul class='<%= person.position.gsub(" ", "_") %>'>
   <%= person.first_name %> <%= person.last_name %>
   <%= "Gross salary:"%> <%= person.net_pay_before_tax.round(2) %>
   <%= "Net pay:" %> <%= person.net_pay_after_tax.round(2) %>

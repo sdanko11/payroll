@@ -4,7 +4,10 @@
  <% @employees.each do |employee| %>
     <ul>
     <% if person['last_name'] == employee.last_name %>
-      <%= employee.first_name %> <%=employee.last_name %> <%=person["gross_sale_value"]%> 
+        <%= employee.full_name %>
+        Gross Sales:
+        <%= person["gross_sale_value"] %>
+        <%= "Totla Commision:" %> <%= employee.total_commission %>
       <%end%>
     </ul>
     <%end%>

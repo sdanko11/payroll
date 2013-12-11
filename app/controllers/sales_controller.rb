@@ -1,5 +1,6 @@
 class SalesController < ApplicationController
   def index
+    # binding.pry
     # make your sales objects available to the correlating view here
    Sale.load_sales
    Employee.load_employees

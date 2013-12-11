@@ -43,6 +43,14 @@ class Employee
     total_commission
   end
 
+  def full_name
+    [first_name, last_name].join(" ")
+  end
+
+  def total_commission
+
+  end
+
   def self.print_data
     @@all_employees.each do |employee|
       puts "*** #{employee.first_name} #{employee.last_name} ***"
